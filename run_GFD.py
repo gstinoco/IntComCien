@@ -17,7 +17,7 @@
 import numpy as np
 from scipy.io import loadmat
 import Graphs
-import GFD_Difusion
+import GFD_Diffusion
 
 # Diffusion coefficient
 v = 0.2
@@ -44,5 +44,5 @@ x  = mat['x']
 y  = mat['y']
 
 # Poisson 2D computed in a logically rectangular mesh
-u_ap, u_ex = GFD_Difusion.Mesh(x, y, fDIF, v, t)
+u_ap, u_ex = GFD_Diffusion.Mesh(x, y, fDIF, v, t)
 Graphs.Mesh_Transient(x, y, u_ap, x, y, u_ex)
