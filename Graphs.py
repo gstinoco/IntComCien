@@ -27,29 +27,29 @@ def Mesh_Transient(x, y, u_ap, x2, y2, u_ex):
     for k in np.arange(0,t,step):
         fig, (ax1, ax2) = plt.subplots(1, 2, subplot_kw = {"projection": "3d"}, figsize=(8, 4))
         tin = float(T[k])
-        plt.suptitle('Solution at t = %1.3f s.' %tin)
+        plt.suptitle('Solución al tiempo t = %1.3f s.' %tin)
         
         ax1.plot_surface(x, y, u_ap[:,:,k], cmap=cm.coolwarm)
         ax1.set_zlim([min, max])
-        ax1.set_title('Approximation')
+        ax1.set_title('Aproximación')
 
         ax2.plot_surface(x2, y2, u_ex[:,:,k], cmap=cm.coolwarm)
         ax2.set_zlim([min, max])
-        ax2.set_title('Theoretical Solution')
+        ax2.set_title('Solución Exacta')
 
         plt.pause(0.01)
         plt.close()
     
     fig, (ax1, ax2) = plt.subplots(1, 2, subplot_kw = {"projection": "3d"}, figsize=(8, 4))
     tin = float(T[t-1])
-    plt.suptitle('Solution at t = %1.3f s.' %tin)
+    plt.suptitle('Solución al tiempo t = %1.3f s.' %tin)
     
     ax1.plot_surface(x, y, u_ap[:,:,t-1], cmap=cm.coolwarm)
     ax1.set_zlim([min, max])
-    ax1.set_title('Approximation')
+    ax1.set_title('Aproximación')
 
     ax2.plot_surface(x2, y2, u_ex[:,:,t-1], cmap=cm.coolwarm)
     ax2.set_zlim([min, max])
-    ax2.set_title('Theoretical Solution')
+    ax2.set_title('Solución Exacta')
 
     plt.show()
