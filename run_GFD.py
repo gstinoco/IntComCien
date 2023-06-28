@@ -1,4 +1,4 @@
-# All the codes presented below were developed by:
+# All the codes were developed by:
 #   Dr. Gerardo Tinoco Guerrero
 #   Universidad Michoacana de San Nicolás de Hidalgo
 #   gerardo.tinoco@umich.mx
